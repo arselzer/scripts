@@ -9,10 +9,11 @@ if [[ $(nc -z localhost 3128; echo $?) -eq 1 ]]; then
   ssh -D $proxy_port -f -N "$proxy_user@$proxy_host"
 fi
 
+echo -n "current IP: "
+curl "http://ip-api.com/line/?fields=query,city,country"
+
 chromium \
   --proxy-server="socks5://localhost:3128" \
   --host-resolver-rules="MAP * 0.0.0.0, EXCLUDE localhost" \
   http://www.google.at/search?q=ip
 
-echo -n "current IP: "
-curl "http://ip-api.com/line/?fields=query,city,country"
