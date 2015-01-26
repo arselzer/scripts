@@ -24,3 +24,6 @@ echo 'auto'     | sudo tee '/sys/bus/pci/devices/0000:02:00.0/power/control'
 echo 'auto'     | sudo tee '/sys/bus/pci/devices/0000:03:00.0/power/control'
 echo 'auto'     | sudo tee '/sys/bus/pci/devices/0000:04:00.0/power/control'
 echo 'auto'     | sudo tee '/sys/bus/pci/devices/0000:00:16.0/power/control'
+echo 'auto'     | sudo tee '/sys/bus/usb/devices/2-3/power/control'
+echo 'auto'     | sudo tee '/sys/bus/pci/devices/0000:07:00.0/power/control'
+
